@@ -113,6 +113,7 @@ p {
 .brand {
   display: inline-flex;
   align-items: center;
+  gap: 10px;
 }
 
 .brand-logo,
@@ -137,6 +138,17 @@ p {
 
 .brand-mark-fallback {
   display: none;
+}
+
+.brand-name {
+  max-width: 290px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #e7f1ff;
+  font-weight: 600;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
 }
 
 .menu-toggle {
@@ -374,6 +386,11 @@ p {
 }
 
 @media (max-width: 760px) {
+  .brand-name {
+    max-width: 180px;
+    font-size: 0.88rem;
+  }
+
   .menu-toggle {
     display: inline-block;
   }
