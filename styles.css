@@ -8,6 +8,7 @@
   --muted: #4f6686;
   --radius: 16px;
   --container-max: 1200px;
+  --safe-gutter: 20px;
 }
 
 * {
@@ -31,7 +32,7 @@ a {
 }
 
 .container {
-  width: min(var(--container-max), 92vw);
+  width: min(var(--container-max), calc(100vw - (var(--safe-gutter) * 2)));
   margin: 0 auto;
 }
 
@@ -411,10 +412,11 @@ p {
 @media (min-width: 1440px) {
   :root {
     --container-max: 1400px;
+    --safe-gutter: 28px;
   }
 
   .container {
-    width: min(var(--container-max), 90vw);
+    width: min(var(--container-max), calc(100vw - (var(--safe-gutter) * 2)));
   }
 
   .nav {
@@ -430,10 +432,11 @@ p {
 @media (min-width: 1920px) {
   :root {
     --container-max: 1680px;
+    --safe-gutter: 44px;
   }
 
   .container {
-    width: min(var(--container-max), 88vw);
+    width: min(var(--container-max), calc(100vw - (var(--safe-gutter) * 2)));
   }
 
   .section {
@@ -448,10 +451,11 @@ p {
 @media (min-width: 2560px) {
   :root {
     --container-max: 2200px;
+    --safe-gutter: 64px;
   }
 
   .container {
-    width: min(var(--container-max), 86vw);
+    width: min(var(--container-max), calc(100vw - (var(--safe-gutter) * 2)));
   }
 
   .section {
@@ -470,10 +474,11 @@ p {
 @media (min-width: 3200px) {
   :root {
     --container-max: 2680px;
+    --safe-gutter: 88px;
   }
 
   .container {
-    width: min(var(--container-max), 84vw);
+    width: min(var(--container-max), calc(100vw - (var(--safe-gutter) * 2)));
   }
 
   body {
